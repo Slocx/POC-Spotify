@@ -35,3 +35,7 @@ In order to run the different examples, open the folder with the name of the flo
     $ node app.js
 
 Then, open `http://localhost:8888` in a browser.
+
+## TEST REFRESH ALBUM
+Click Obtain new album then click new token to refresh.
+Function only one time actually version test.
