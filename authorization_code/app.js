@@ -148,6 +148,7 @@
    var album_token = req.query.album_token;
    var options = {
      url: `https://api.spotify.com/v1/search?q=${album_token}&type=album&market=FR&limit=2`,
+    //  url: "https://api.spotify.com/v1/albums",
      headers: { 'Authorization': 'Bearer ' + access_token },
      json: true
    };
@@ -155,7 +156,8 @@
      if (!error && response.statusCode === 200) {
        var access_token = body.access_token;
        res.send({
-         'access_token': access_token
+         'access_token': access_token,
+        //  'album_token': album_token
        });
      }
    });

@@ -145,21 +145,23 @@
           }, false);
 
           document.getElementById('obtain-new-album').addEventListener('click', function() {
-            $.ajax({
-              url: '/get_albums',
-              data: {
-                'album_token': album_token
-              }
-            }).done(function(data) {
-              console.log("Ca fonctionne");
-              data.album_token = "6L4Vdc6RUm3UM71i65Cw3B"
-              album_token = data.album_token;
-              oauthPlaceholder.innerHTML = oauthTemplate({
-                access_token: access_token,
-                refresh_token: refresh_token,
-                album_token: album_token
-              });
-            });
+            // console.log("Ca rentre ?");
+            // $.ajax({
+            //   url: '/get_albums',
+            //   data: {
+            //     'album_token': album_token
+            //   }
+            // }).done(function(data) {
+            //   console.log("Ca fonctionne");
+            //   data.album_token = "6L4Vdc6RUm3UM71i65Cw3B"
+            //   album_token = data.album_token;
+            //   oauthPlaceholder.innerHTML = oauthTemplate({
+            //     access_token: access_token,
+            //     refresh_token: refresh_token,
+            //     album_token: album_token
+            //   });
+            // });
+            album_token = "6L4Vdc6RUm3UM71i65Cw3B"
           }, false);
         }
       })();
